@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700);
+// @import 'normalize'
+
+$font-stack: Lato, Helvetica, sans-serif;
+$background: #ccc;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+
+  h1 {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+
+#Form {
+
+  background-color: $background;
+
+}
+
+.field {
+  
+  text-align: center;
+  height: 650px;
+
+  .field-number {
+    font-size: 23px;
+    font-weight: 600;
+    display: inline;
+  }
+
+  .field-question {
+    font-size: 20px;
+    font-weight: 600;
+    display: inline;
+  }
+
+}

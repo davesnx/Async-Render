@@ -8,13 +8,13 @@ export default class Field extends Component {
 
   render() {
     return (
-      <li className="field">
+      <div className="field">
         <div className="field-number"> { this.props.id } </div>
         <p className="field-question"> { this.props.question } </p>
         <p className="field-description"> { this.props.description } </p>
         <input className="field-answer" type="text" defaultValue={ this.props.input } />
         <button> { this.props.next } </button>
-      </li>
+      </div>
     );
   }
 
