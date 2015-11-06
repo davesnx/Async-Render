@@ -1,8 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700);
-// @import 'normalize'
+@charset "UTF-8";
 
-$font-stack: Lato, Helvetica, sans-serif;
-$background: #ccc;
+@import "components/prefixer";
+@import "components/color";
+
+@import "components/variables";
+@import "components/normalize";
+@import "components/form";
+@import "components/buttons";
+
+@import "components/font";
+
+$background: color rgba(0, 0, 0, 0.7);
 
 html,
 body {
@@ -14,27 +22,27 @@ body {
     font-size: 34px;
     font-weight: 600;
     text-align: center;
-    margin-top: 5px;
+    padding-top: 20px;
     margin-bottom: 10px;
+    margin-top: 0;
   }
 }
 
 
 #Form {
-
   background-color: $background;
-
 }
 
 .field {
-  
-  text-align: center;
-  height: 650px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 100px;
 
   .field-number {
     font-size: 23px;
     font-weight: 600;
     display: inline;
+    margin-right: 10px;
   }
 
   .field-question {
