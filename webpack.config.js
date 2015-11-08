@@ -4,10 +4,13 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
+  debug: true,
   entry: [
+    'webpack/hot/dev-server',
     'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'app/js/Index.js')
   ],
@@ -28,6 +31,13 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 1337,
+      server: {baseDir: [path.join(__dirname, '/dist/')]}
+    }, {
+      reload: true
     })
   ],
   resolve: {

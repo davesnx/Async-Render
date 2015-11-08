@@ -51,3 +51,4 @@ coverage
 
 # dist directory
 lib/
+dist/
