@@ -1,4 +1,4 @@
-# async render poc spike
+#async render poc spike
 
 This is a poc app using async rendering with react and virtual dom
 [TF-5789](https://typeform.atlassian.net/browse/TF-5789)
