@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 export default class Field extends Component {
-  
+
   // static propTypes = {
   //   id: React.propTypes.number,
-  //   question: 
-  //   description: 
+  //   question:
+  //   description:
   //   answer:
-  //   next: 
+  //   next:
   // }
 
   constructor(props) {
