@@ -7,8 +7,13 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
 
 module.exports = {
+  cache: false,
+  debug: false,
+  devtool: false,
+  hot: false,
+  build: true,
   entry: [
-    path.join(__dirname, 'app/js/index.js')
+    path.join(__dirname, '..', '..', 'app/js/index.js')
   ],
   output: {
     path: path.join(__dirname, '/dist/'),

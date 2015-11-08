@@ -1,15 +1,19 @@
 {
   "name": "async-render-poc",
-  "version": "0.1.0",
-  "description": "A boilerplate for running a Webpack workflow in Node express",
+  "version": "0.2.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "",
-    "start": "webpack --watch --config ./webpack.config.js --progress --profile --colors",
-    "build": "npm run clean && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors",
-    "eslint": "eslint .",
     "clean": "rimraf dist",
-    "jscs": "jscs ."
+    "start": "webpack --watch --config ./config/webpack/webpack.config.js --progress --profile --colors",
+    "build": "npm run clean && NODE_ENV=production webpack --config ./config/webpack/webpack.production.config.js --progress --profile --colors",
+    "lint": "eslint ./app/**/*.js",
+    "jscs": "jscs ./app/**/*.js",
+    "test": "",
+    "package:purge": "rm -rf node_modules",
+    "package:reinstall": "npm run package:purge && npm install",
+    "package:updates": "./node_modules/.bin/ncu",
+    "package:upgrade": "npm run package:updates -u"
   },
   "dependencies": {
     "react": "0.14.0-rc1 ",
@@ -37,6 +41,7 @@
     "mocha": "^2.3.3",
     "mocha-jsdom": "^1.0.0",
     "node-sass": "^3.4.1",
+    "npm-check-updates": "^2.3.4",
     "postcss-loader": "^0.6.0",
     "react-addons-test-utils": "0.14.0-rc1",
     "react-hot-loader": "^1.3.0",
@@ -50,5 +55,9 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0"
+  },
+  "devEngines": {
+    "node": "4.x || 5.x",
+    "npm": "2.x || 3.x"
   }
 }
